@@ -1,5 +1,5 @@
 <?php
-
+//use \App\Role;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
+    /*$member = Role::create(['name' => 'member']);
+    $admin = Role::create(['name' => 'administrator']);
+    $owner = Role::create(['name' => 'owner']);*/
 });
