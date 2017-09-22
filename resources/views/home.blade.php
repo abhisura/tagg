@@ -16,37 +16,37 @@
                     </div>
                 @endif
                 <div class="form-group">
-                    <label for="inputName" class="col-lg-2 control-label">Business Name</label>
+                    <label for="inputName" class="col-lg-2 control-label">Business Name*</label>
                     <div class="col-lg-6">
                         <input type="text" name="businessname" class="form-control" id="inputName" placeholder="Name of the Business">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputAddress1" class="col-lg-2 control-label">Address 1</label>
+                    <label for="inputAddress1" class="col-lg-2 control-label">Address 1*</label>
                     <div class="col-lg-6">
                         <input type="text" name="address1" class="form-control" id="inputAddress1" placeholder="Example: Street Name,Company Name,P.O. Box Number">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputAddress2" class="col-lg-2 control-label">Address 2</label>
+                    <label for="inputAddress2" class="col-lg-2 control-label">Address 2*</label>
                     <div class="col-lg-6">
                         <input type="text" name="address2" class="form-control" id="inputAddress2" placeholder="Example: Apartment,Suite,Unit Number,Building,Floor">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputCity" class="col-lg-2 control-label">City</label>
+                    <label for="inputCity" class="col-lg-2 control-label">City*</label>
                     <div class="col-lg-3">
                         <input type="text" name="city" class="form-control" id="inputCity" placeholder="Name of the City">
                 </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputZip" class="col-lg-2 control-label">ZipCode</label>
+                    <label for="inputZip" class="col-lg-2 control-label">ZipCode*</label>
                     <div class="col-lg-1">
                         <input type="text" name="zipcode" class="form-control" id="inputZip" placeholder="Zip">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="state" class="col-lg-2 control-label">State</label>
+                    <label for="state" class="col-lg-2 control-label">State*</label>
                     <div class="col-lg-6">
                         <select class="form-control" name="state" id="state">
                             <option value="Select State">Select State</option>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
                     <div class="form-group">
-                            <label for="inputBusinessEmail" class="col-lg-2 control-label">Business Email</label>
+                            <label for="inputBusinessEmail" class="col-lg-2 control-label">Business Email*</label>
                             <div class="col-lg-6">
                                 <input type="text" name="businessemail" class="form-control" id="inputBusinessEmail" placeholder="Email Address">
                             </div>
