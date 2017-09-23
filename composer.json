@@ -23,7 +23,8 @@
     "pdepend/pdepend": "2.5.0",
     "phpmd/phpmd": "@stable",
     "sebastian/phpcpd": "3.0.0",
-    "theseer/phpdox": "0.10.1"
+    "theseer/phpdox": "0.10.1",
+    "friendsofphp/php-cs-fixer": "2.6"
   },
   "autoload": {
     "classmap": [
