@@ -26,13 +26,16 @@ class RegistersController extends Controller
         $newOrganization ->state = $request->input('state');
         $newOrganization ->zipcode = $request->input('zipcode');
         $newOrganization ->phone_number = $request->input('phone_number');
-$temp = $newOrganization ->save();
+        $newOrganization ->save();
+        $orgId = $newOrganization ->id;
+        // roleID = Business Admin (3)
+        $roleID = 3;
 //dd($temp);
         //$orgID = $this->saveOrganization($newOrganization);
 
         // TODO: Get path of user registration screen.. Also Pass user Role??
         // IF orgID NOT EMPTY/Nothing/0 THEN
-        return redirect('/Register', $orgID, $userRole);
+        return redirect('/Register', $orgId, $roleID);
         //ELSE throw error
 
 
