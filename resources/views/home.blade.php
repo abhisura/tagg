@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputAddress2" class="col-lg-2 control-label">Address 2*</label>
+                    <label for="inputAddress2" class="col-lg-2 control-label">Address 2</label>
                     <div class="col-lg-6">
                         <input type="text" name="address2" class="form-control" id="inputAddress2" placeholder="Example: Apartment,Suite,Unit Number,Building,Floor">
                     </div>
@@ -110,16 +110,28 @@
                                 <input type="text" name="businessemail" class="form-control" id="inputBusinessEmail" placeholder="Email Address">
                             </div>
                         </div>
+                <div class="form-group">
+                    <label for="password" class="col-lg-2 control-label">Password*</label>
+                    <div class="col-lg-6">
+                        <input type="text" name="password" class="form-control" id="inputPassword" placeholder="Enter Your New Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm password" class="col-lg-2 control-label">Confirm Password*</label>
+                    <div class="col-lg-6">
+                        <input type="text" name="password" class="form-control" id="inputConfirmPassword" placeholder="Enter Your New Password">
+                    </div>
+                </div>
                         <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <button type="reset" class="btn btn-default">Cancel</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
+                        <h6> Fields Marked With A Star(*) Are Mandatory </h6>
                     </div>
                 </div>
             </fieldset>
         </form>
     </div>
-
 @include('style.footer')
 
 

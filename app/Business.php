@@ -13,7 +13,8 @@ class Business extends Model
       'city',
       'zipcode',
       'state',
-      'businessemail'
-
+      'businessemail',
+      'password',
+      'confirm password'
     ];
 }
