@@ -107,9 +107,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPhone" class="col-lg-6 control-label">Phone*</label>
-                    <div class="col-lg-1">
-                        <input type="text" name="phone_number" class="form-control" id="inputPhone" placeholder="Phone">
+                    <label for="inputPhone" class="col-lg-2 control-label">Phone(xxx-xxx-xxxx)*</label>
+                    <div class="col-lg-3">
+                        <input type="tel" input pattern="^\d{3}-\d{3}-\d{4}$"" name="phone_number" class="form-control" id="inputPhone" placeholder="Phone">
                     </div>
                 </div>
                         <div class="form-group">
