@@ -30,9 +30,9 @@ $temp = $newOrganization ->save();
 //dd($temp);
         //$orgID = $this->saveOrganization($newOrganization);
 
-        // TODO: Get path of user registration screen
+        // TODO: Get path of user registration screen.. Also Pass user Role??
         // IF orgID NOT EMPTY/Nothing/0 THEN
-        return redirect('/Register', $orgID);
+        return redirect('/Register', $orgID, $userRole);
         //ELSE throw error
 
 
