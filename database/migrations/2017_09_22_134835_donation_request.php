@@ -45,6 +45,6 @@ class DonationRequest extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('donation_request');
     }
 }
