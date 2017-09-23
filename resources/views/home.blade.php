@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <strong>{{$role}}</strong> are logged in!
+                    <strong>{{$role}}</strong> is logged in!
                 </div>
             </div>
         </div>
