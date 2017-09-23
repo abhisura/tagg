@@ -9,15 +9,14 @@ class RegistersController extends Controller
 {
     public function register(Request $request){
         $this->validate($request, [
-            'businessname' => 'required|max:255',
-            'address1' => 'required|max:40',
-            'address2' => 'required|max:40',
-            'city' => 'required|max:40',
-            'zipcode' => 'required|max:6',
+            'businessname' => 'required',
+            'address1' => 'required',
+            'address2' => 'required',
+            'city' => 'required',
+            'zipcode' => 'required',
             'state' => 'required',
-            'businessemail' => 'email|unique:posts',
-            'password' => 'password',
-            'confirm password' => 'confirm password',
+            'businessemail' => 'required|email|unique',
+            'password' => 'required|confirmed'
         ]);
 
         $businesses = new Business;
@@ -29,9 +28,9 @@ class RegistersController extends Controller
         $businesses ->state = $request->input('state');
         $businesses ->businessemail = $request->input('businessemail');
         $businesses ->password = $request->input('password');
-        $businesses ->confirmpassword = $request->input('confirm password');
+        $businesses ->confirmpassword = $request->input('confirmpassword');
         $businesses ->save();
-        return redirect('/')->with('response', 'Thanks for regestering with Tagg. You will be notfied shortly with your account details');
+        return redirect('/response')->with('response', 'Thanks for regestering with Tagg. You will be notfied shortly with your account details');
 
     }
 }

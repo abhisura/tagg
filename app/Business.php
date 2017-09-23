@@ -14,7 +14,14 @@ class Business extends Model
       'zipcode',
       'state',
       'businessemail',
-      'password',
-      'confirm password'
     ];
+
+/**
+ * The attributes that should be hidden for arrays.
+ *
+ * @var array
+ */
+protected $hidden = [
+    'password', 'confirmpassword',
+];
 }

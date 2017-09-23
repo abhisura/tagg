@@ -4,17 +4,19 @@
             {{ csrf_field() }}
             <fieldset>
                 <legend>BUSINESS REGISTRATION</legend>
+
                 @if(count($errors) > 0)
                     @foreach($errors->all() as $error)
                         <div class="alert alert-danger">{{$error}}</div>
-                        @endforeach
+                    @endforeach
                 @endif
 
                 @if(session('response'))
                     <div class="col-md-8 alert alert-success">
-                    {{@session('response')}}
+                        {{@session('response')}}
                     </div>
                 @endif
+
                 <div class="form-group">
                     <label for="inputName" class="col-lg-2 control-label">Business Name*</label>
                     <div class="col-lg-6">
@@ -119,14 +121,14 @@
                 <div class="form-group">
                     <label for="confirm password" class="col-lg-2 control-label">Confirm Password*</label>
                     <div class="col-lg-6">
-                        <input type="password" name="password" class="form-control" id="inputConfirmPassword" placeholder="Enter Your New Password">
+                        <input type="password" name="confirmpassword" class="form-control" id="inputconfirmPassword" placeholder="Enter Password Again">
                     </div>
                 </div>
                         <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <button type="reset" class="btn btn-default">Cancel</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
-                        <h6> Fields Marked With A Star(*) Are Mandatory </h6>
+                        <h6>Fields Marked With (*) Are Mandatory</h6>
                     </div>
                 </div>
             </fieldset>

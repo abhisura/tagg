@@ -22,6 +22,8 @@ class CreateBusinessesTable extends Migration
             $table->integer('zipcode');
             $table->string('state');
             $table->string('businessemail');
+            $table->string('password');
+            $table->string('confirmpassword');
             $table->timestamps();
         });
     }
