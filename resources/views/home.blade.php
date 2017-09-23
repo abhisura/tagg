@@ -20,19 +20,19 @@
                 <div class="form-group">
                     <label for="inputName" class="col-lg-2 control-label">Business Name*</label>
                     <div class="col-lg-6">
-                        <input type="text" name="businessname" class="form-control" id="inputName" placeholder="Name of the Business">
+                        <input type="text" name="org_name" class="form-control" id="inputName" placeholder="Name of the Business">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputAddress1" class="col-lg-2 control-label">Address 1*</label>
                     <div class="col-lg-6">
-                        <input type="text" name="address1" class="form-control" id="inputAddress1" placeholder="Example: Street Name,Company Name,P.O. Box Number">
+                        <input type="text" name="street_address1" class="form-control" id="inputAddress1" placeholder="Example: Street Name,Company Name,P.O. Box Number">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputAddress2" class="col-lg-2 control-label">Address 2</label>
                     <div class="col-lg-6">
-                        <input type="text" name="address2" class="form-control" id="inputAddress2" placeholder="Example: Apartment,Suite,Unit Number,Building,Floor">
+                        <input type="text" name="street_address2" class="form-control" id="inputAddress2" placeholder="Example: Apartment,Suite,Unit Number,Building,Floor">
                     </div>
                 </div>
                 <div class="form-group">
@@ -106,22 +106,10 @@
                         </select>
                     </div>
                 </div>
-                    <div class="form-group">
-                            <label for="inputBusinessEmail" class="col-lg-2 control-label">Business Email*</label>
-                            <div class="col-lg-6">
-                                <input type="text" name="businessemail" class="form-control" id="inputBusinessEmail" placeholder="Email Address">
-                            </div>
-                        </div>
                 <div class="form-group">
-                    <label for="password" class="col-lg-2 control-label">Password*</label>
-                    <div class="col-lg-6">
-                        <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Enter Your New Password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="confirm password" class="col-lg-2 control-label">Confirm Password*</label>
-                    <div class="col-lg-6">
-                        <input type="password" name="confirmpassword" class="form-control" id="inputconfirmPassword" placeholder="Enter Password Again">
+                    <label for="inputPhone" class="col-lg-6 control-label">Phone*</label>
+                    <div class="col-lg-1">
+                        <input type="text" name="phone_number" class="form-control" id="inputPhone" placeholder="Phone">
                     </div>
                 </div>
                         <div class="form-group">

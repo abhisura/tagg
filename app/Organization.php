@@ -4,16 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Business extends Model
+class Organization extends Model
 {
     protected $fillable=[
-      'businessname',
-      'address1',
-      'address2',
+      'org_name',
+      'street_address1',
+      'street_address2',
       'city',
+       'state',
       'zipcode',
-      'state',
-      'businessemail',
+      'phone_number',
     ];
 
 /**
@@ -21,7 +21,4 @@ class Business extends Model
  *
  * @var array
  */
-protected $hidden = [
-    'password', 'confirmpassword',
-];
 }
