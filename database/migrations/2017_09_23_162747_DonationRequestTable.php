@@ -23,8 +23,8 @@ class DonationRequestTable extends Migration
             $table->string('lastname');
             $table->string('email');
             $table->string('phonenumber');
-            $table->string('address1');
-            $table->string('address2');
+            $table->string('street_address1');
+            $table->string('street_address2');
             $table->string('city');
             $table->string('state');
             $table->string('zipcode');

@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('street_address1');
-            $table->string('street_address1')->nullable();
+            $table->string('street_address2')->nullable();
             $table->string('city');
             $table->string('state');
             $table->string('zipcode');
