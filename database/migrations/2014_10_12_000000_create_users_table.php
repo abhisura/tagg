@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use doctrine\dbal;
 
 class CreateUsersTable extends Migration
 {
@@ -21,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('street_address1');
-            $table->string('street_address2');
+            $table->string('street_address1')->nullable();
             $table->string('city');
             $table->string('state');
             $table->string('zipcode');

@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use doctrine\dbal;
 
-class DonationRequest extends Migration
+class DonationRequestTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +14,8 @@ class DonationRequest extends Migration
      */
     public function up()
     {
-        Schema::create('donation_request', function (Blueprint $table) {
-            /* TODO: CLEAN UP, DOESNT MAKE ANY SENSE */
-			$table->increments('id');
+        Schema::create('DonationRequest', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('organization_id')->unsigned()->index();
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
             $table->string('formOrganization');
@@ -31,11 +31,15 @@ class DonationRequest extends Migration
             $table->string('taxexempt');
             $table->string('formRequestFor');
             $table->string('formDonationPurpose');
+            $table->string('eventname');
+            $table->string('eventdate');
+            $table->string('enddate');
+            $table->string('eventpurpose');
             $table->string('formAttendees');
             $table->string('venue');
             $table->string('marketingopportunities');
             $table->timestamps();
-		});
+        });
     }
 
     /**
@@ -45,6 +49,6 @@ class DonationRequest extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('donation_request');
+        Schema::dropIfExists('DonationRequest');
     }
 }
