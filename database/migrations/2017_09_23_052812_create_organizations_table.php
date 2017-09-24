@@ -41,3 +41,7 @@ class CreateOrganizationsTable extends Migration
         });
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 2dcc59c... final commit
