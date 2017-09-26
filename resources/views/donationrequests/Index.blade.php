@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Register Your Organization Here</div>
+                    <div class="panel-heading">DONATION REQUEST xxx FORM</div>
 
                     <div class="panel-body">
                         <form class="form-horizontal" method="post" action="{{ url('donationrequest') }}">
@@ -331,11 +331,11 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('FormAttendees') ? ' has-error' : '' }}">
-                                <label for="FormAttendees" class="col-md-4 control-label">Estimated Number Of Attendes<span style="color: red; font-size: 20px; vertical-align:middle;">*</span> </label>
+                            <div class="form-group{{ $errors->has('formAttendees') ? ' has-error' : '' }}">
+                                <label for="formAttendees" class="col-md-4 control-label">Estimated Number Of Attendes<span style="color: red; font-size: 20px; vertical-align:middle;">*</span> </label>
 
                                 <div class="col-md-6">
-                                    <select class="form-control" name="FormAttendees" id="FormAttendees">
+                                    <select class="form-control" name="formAttendees" id="formAttendees">
                                         <option value="">Select</option>
                                         <option value="ten"> fewer than 10</option>
                                         <option value="twentyfive">11-25</option>
@@ -353,25 +353,25 @@
                                 <label for="inputvenue" class="col-md-4 control-label">Event Venue or Address<span style="color: red; font-size: 20px; vertical-align:middle;">*</span> </label>
 
                                 <div class="col-md-6">
-                                    <input id="inputvenue" type="text" class="form-control" name="inputvenue" value="{{ old('inputvenue') }}" placeholder="Place event will be held" required autofocus>
+                                    <input id="venue" type="text" class="form-control" name="venue" value="{{ old('venue') }}" placeholder="Place event will be held" required autofocus>
 
-                                    @if ($errors->has('inputvenue'))
+                                    @if ($errors->has('venue'))
                                         <span class="help-block">
-                                        <strong>{{ $errors->first('inputvenue') }}</strong>
+                                        <strong>{{ $errors->first('venue') }}</strong>
                                     </span>
                                     @endif
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('eventpurpose') ? ' has-error' : '' }}">
-                                <label for="inputmarketingopportunities" class="col-md-4 control-label">What are the marketing opportunities to our business if approved?<span style="color: red; font-size: 20px; vertical-align:middle;">*</span> </label>
+                            <div class="form-group{{ $errors->has('marketingopportunities') ? ' has-error' : '' }}">
+                                <label for="marketingopportunities" class="col-md-4 control-label">What are the marketing opportunities to our business if approved?<span style="color: red; font-size: 20px; vertical-align:middle;">*</span> </label>
 
                                 <div class="col-md-6">
-                                    <input id="inputmarketingopportunities" type="text" class="form-control" name="inputmarketingopportunities" value="{{ old('inputmarketingopportunities') }}" placeholder="Please provide a brief description" required autofocus>
+                                    <input id="marketingopportunities" type="text" class="form-control" name="marketingopportunities" value="{{ old('marketingopportunities') }}" placeholder="Please provide a brief description" required autofocus>
 
-                                    @if ($errors->has('inputmarketingopportunities'))
+                                    @if ($errors->has('marketingopportunities'))
                                         <span class="help-block">
-                                        <strong>{{ $errors->first('inputmarketingopportunities') }}</strong>
+                                        <strong>{{ $errors->first('marketingopportunities/') }}</strong>
                                     </span>
                                     @endif
                                 </div>
@@ -379,12 +379,14 @@
 
 
 
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        Register
-                                    </button>
-                                    <span style="color: red"> <h5>Fields Marked With (<span style="color: red; font-size: 20px; vertical-align:middle;">*</span>) Are Mandatory</h5></span>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Submit
+                                </button>
+                                <h5>Fields Marked With (*) Are Mandatory</h5>
+                            </div>
+                        </div>
 
                                 </div>
                             </div>

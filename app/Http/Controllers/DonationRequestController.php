@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\DonationRequest;
-use Validator;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\withErrors;
+
+
 
 class DonationRequestController extends Controller
 {
@@ -28,7 +27,7 @@ class DonationRequestController extends Controller
     public function store(Request $request)
     {//dd('Yup');
     //dd($request);
-        $this->validate($request,
+        /*$this->validate($request,
             [
                 'organization' => 'required',
                 'formOrganization' => 'required',
@@ -51,7 +50,8 @@ class DonationRequestController extends Controller
                 'formAttendees' => 'required',
                 'venue' => 'required',
                 'marketingopportunities' => 'required'
-            ]);
+            ]);*/
+
 
         $donationRequest = new DonationRequest;
         $donationRequest->organization = $request->organization;
@@ -74,6 +74,7 @@ class DonationRequestController extends Controller
         $donationRequest->venue = $request->venue;
         $donationRequest->marketingopportunities = $request->marketingopportunities;
         $donationRequest->save();
+        return redirect('/')->with('response', 'Your donation request has been recieved.');
 
         /*if ($validator->fails()) {
             dd('fail');

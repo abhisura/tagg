@@ -217,13 +217,15 @@
                         <div class="form-group">
                             <label for="inputeventpurpose" class="col-lg-2 control-label">Event Purpose:*</label>
                             <div class="col-lg-1">
-                                <input type="text" name="eventpurpose" class="form-control" id="inputeventpurpose" placeholder="Purpose of event..example: raise awareness, generate funds for research, ect.">
+                                <input type="text" name="eventpurpose" class="form-control" id="inputeventpurpose" placeholder="Purpose of event..example: raise awareness, generate funds for research, etc.">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="FormAttendees" class="col-lg-2 control-label">Estimated Number of Attendees:*</label>
-                            <div class="col-lg-6">
-                                <select class="form-control" name="FormAttendees" id="FormAttendees">
+            <div class="form-group">
+                    <label for="formAttendees" class="col-lg-2 control-label">Which of the following best describes your organization:*</label>
+                    
+                    <div class="col-lg-6">
+                     
+                         <select class="formAttendees" name="formAttendees" id="formAttendees">
                                     <option value="">Select...</option>
                                     <option value="ten"> fewer than 10</option>
                                     <option value="twentyfive">11-25</option>
@@ -234,8 +236,8 @@
                                     <option value="twohundred">151-200</option>
                                     <option value="morethantwohundred">more than 200</option>
                                 </select>
-                            </div>
-                        </div>
+                    </div>
+
                         <div class="form-group">
                             <label for="inputvenue" class="col-lg-2 control-label">Event Venue or address:*</label>
                             <div class="col-lg-1">
@@ -248,8 +250,14 @@
                                 <input type="text" name="marketingopportunities" class="form-control" id="inputmarketingopportunities" placeholder="Please provide a brief description of the business value this event creates for the company.">
                             </div>
                         </div>
-                        {!! Form::submit('Submit', ['class'=> 'btn btn-primary form-control']) !!}
-                        <h6>Fields Marked With (*) Are Mandatory</h6>
+                          <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                                <h5>Fields Marked With (*) Are Mandatory</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
