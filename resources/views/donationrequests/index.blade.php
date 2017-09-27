@@ -8,9 +8,9 @@
                 <div class="panel-heading">Donation Request Form</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('donationrequests') }}">
+                    <form class="form-horizontal" method="POST" action="{{ action('DonationRequestController@store') }}">
                         {{ csrf_field() }}
-
+                        <input type="hidden" name="orgId" value="{{ $_GET['orgId'] }}">
                         <div class="form-group{{ $errors->has('requester') ? ' has-error' : '' }}">
                             <label for="requester" class="col-md-4 control-label">Name Of The Organization <span style="color: red; font-size: 20px; vertical-align:middle;">*</span></label>
 
@@ -300,7 +300,7 @@
                         </div>
 
                      <div class="form-group{{ $errors->has('enddate') ? ' has-error' : '' }}">
-                            <label for="enddate" class="col-md-4 control-label">End Date <span style="color: red; font-size: 20px; vertical-align:middle;">*</label>
+                         <label for="enddate" class="col-md-4 control-label">End Date <span style="color: red; font-size: 20px; vertical-align:middle;">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="enddate" type="date" class="form-control" name="enddate" value="{{ old('enddate') }}" placeholder="End Date" required autofocus>
@@ -314,7 +314,7 @@
                         </div>
 
                      <div class="form-group{{ $errors->has('eventpurpose') ? ' has-error' : '' }}">
-                            <label for="eventpurpose" class="col-md-4 control-label">Purpose Of The Event <span style="color: red; font-size: 20px; vertical-align:middle;">*</label>
+                            <label for="eventpurpose" class="col-md-4 control-label">Purpose Of The Event <span style="color: red; font-size: 20px; vertical-align:middle;">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="eventpurpose" type="text" class="form-control" name="eventpurpose" value="{{ old('eventpurpose') }}" placeholder="Purpose of the Event" required autofocus>

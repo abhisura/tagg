@@ -19,4 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/donate', 'DonationRequestController@store')->name('donation');
+// Route::post('/donationrequests', 'DonationRequestController@store')->name('donation');
+
+//Route::resource('/donationrequest', 'DonationRequestController');
+Route::resource('donationrequest', 'DonationRequestController');
+//Route::post('donationrequest/{orgID}', ['as' => 'donationrequest', 'uses' => 'DonationRequestController@store']); //->name('donation');
