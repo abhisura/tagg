@@ -27,5 +27,4 @@ class DonationRequest extends Model
         'venue',
         'marketing_opportunities'];
      protected $table = 'donation_requests';
-     public $timestamps = false;
 }
