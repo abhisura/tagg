@@ -203,7 +203,7 @@
 
     <script>
         $(document).ready(function() {
-            //$('#example').DataTable();
+            $('#example').DataTable();
         } );
 
         $('#selectall').change(function() {
@@ -262,6 +262,9 @@
 
         }
     </script>
+
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
 </div>
     @endsection
