@@ -250,7 +250,7 @@
                         //1- rejected
                         $('#status' + resp.idsArray[i]).text(setStatusText);
                     }
-                    //alert(resp.emailids);
+                    alert('Selected Request(s) are ' + setStatusText);
                 },
                 data: {ids:idsArray, status:actionStatus}
             });
