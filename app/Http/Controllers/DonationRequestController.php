@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\DonationRequest;
 use App\Events\SendAutoRejectEmail;
 use App\Events\TriggerAcceptEmailEvent;
+use App\Events\TriggerRejectEmailEvent;
 use App\File;
 use App\Request_event_type;
 use App\Request_item_purpose;
@@ -216,7 +217,7 @@ class DonationRequestController extends Controller
             $rejectedrequests = DonationRequest::whereIn('id', $request['ids'])->get();
 
             foreach ($rejectedrequests as $rejectedrequest) {
-                event(new TriggerAcceptEmailEvent($rejectedrequest));
+                event(new TriggerRejectEmailEvent($rejectedrequest));
                 usleep(500000);
             }
         }
