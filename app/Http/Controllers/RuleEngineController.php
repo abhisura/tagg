@@ -68,7 +68,9 @@ class RuleEngineController extends Controller
         $rule->rule_type_id = 2;
         $rule->rule_owner_id = Auth::user()->organization_id;
         $rule->rule = $strJSON;*/
-        Rule::updateOrCreate(['rule_owner_id' => $ruleOwner, 'rule_type_id' => $ruleType], ['rule' => $strJSON]);
+        if($strJSON) {
+            Rule::updateOrCreate(['rule_owner_id' => $ruleOwner, 'rule_type_id' => $ruleType], ['rule' => $strJSON]);
+        }
         return redirect()->back();
     }
 
