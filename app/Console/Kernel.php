@@ -16,7 +16,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \App\Console\Commands\CronJob::class,
+        \App\Console\Commands\RejectRequestPastDaysOfNoticeCronJob::class,
+        \App\Console\Commands\AutomatedReminderEmailCronJob::class,
     ];
 
     /**
@@ -31,6 +32,8 @@ class Kernel extends ConsoleKernel
         //->twiceDaily(self::FIRST_RUN_HOUR, self::SECOND_RUN_HOUR);
         ->everyFiveMinutes();
 
+        $schedule->command('CronJob:automatedReminderEmailCronJob')
+            ->twiceDaily(self::FIRST_RUN_HOUR, self::SECOND_RUN_HOUR);
     }
 
     /**
