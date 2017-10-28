@@ -16,7 +16,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \App\Console\Commands\CronJob::class,
+        \App\Console\Commands\RejectRequestPastDaysOfNoticeCronJob::class,
+        \App\Console\Commands\AutomatedReminderEmailCronJob::class,
     ];
 
     /**
@@ -27,10 +28,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('CronJob:cronjob')
-        //->twiceDaily(self::FIRST_RUN_HOUR, self::SECOND_RUN_HOUR);
-        ->everyFiveMinutes();
+        $schedule->command('CronJob:RejectRequestPastDaysOfNoticeCronJob')
+            >twiceDaily(self::FIRST_RUN_HOUR, self::SECOND_RUN_HOUR);
 
+        $schedule->command('CronJob:automatedReminderEmailCronJob')
+            ->twiceDaily(self::FIRST_RUN_HOUR, self::SECOND_RUN_HOUR);
     }
 
     /**
@@ -44,4 +46,4 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
-   }
+}
