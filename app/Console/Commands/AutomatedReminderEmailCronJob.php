@@ -13,21 +13,21 @@ const REJECTED = 'Rejected';
 
 const APPROVED = 'Approved';
 
-class CronJob extends Command
+class AutomatedReminderEmailCronJob extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'CronJob:cronjob';
+    protected $signature = 'CronJob:AutomatedReminderEmailCronJob ';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Request status updated successfully.';
+    protected $description = 'Sends ReminderEmails for donation requests not yet approved or denied.';
 
     /**
      * Create a new command instance.
