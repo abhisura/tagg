@@ -23,21 +23,21 @@ All os
 ### Installation
 To setup local environment follow below steps -
 
-if you are using wamp stack, run below git command within www folder created inside wamp dir -
-```bash
-git clone --recursive https://github.com/SachinPawaskarUNO/tagg.git
-git git checkout -b development origin/development
-cd tagg
-```
-`All changes are supplied to development branch from other feature branches and later merged to master.`
-
-Now set git identity as below -
+Open git bash and set git identity as below -
 ```bash
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com 
 ```
-
 `Where user name and email is your github user name and email.`
+
+if you are using wamp stack, run below git command within www folder created inside wamp dir -
+```bash
+git clone --recursive https://github.com/SachinPawaskarUNO/tagg.git
+cd tagg
+git checkout -b development origin/development
+git pull
+```
+`All changes are supplied to development branch from other feature branches and later merged to master.`
 
 #### Update project dependencies
 We supply the environment variable through .env file. Sample setting are provided in [.env.example](.env.example).
