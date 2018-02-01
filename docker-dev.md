@@ -1,4 +1,6 @@
-Clone the repo at any place   
+## Instructions in progress 
+
+Clone the repo at any place 
 ```bash
 git clone --recursive https://Github.com/SachinPawaskarUNO/tagg.git
 cd tagg
@@ -17,3 +19,5 @@ docker-compose run app bash
 ```
 
 In side this shell you can run other php artisan or composer commands.
+
+Note `The docker container is created to use pgsql, so .env file must be changed for same.`

@@ -17,7 +17,7 @@ All os
 * [Visual C++ Redistributable Packages](http://wampserver.aviatechno.net/files/vcpackages/all_vc_redist_x86_x64.zip) 
 * [WAMP](http://http://wampserver.aviatechno.net/)
 * [Composer](https://getcomposer.org/)
-* [Git](https://Git-scm.com/downloads) 
+* [git](https://git-scm.com/downloads) 
 * [npm](https://www.npmjs.com/)
 
 ### Installation
@@ -25,18 +25,27 @@ To setup local environment follow below steps -
 
 if you are using wamp stack, run below git command within www folder created inside wamp dir -
 ```bash
-Git clone --recursive https://Github.com/SachinPawaskarUNO/tagg.Git
+git clone --recursive https://github.com/SachinPawaskarUNO/tagg.git
+git git checkout -b development origin/development
 cd tagg
 ```
-Now set Git identity as below -
+`All changes are supplied to development branch from other feature branches and later merged to master.`
+
+Now set git identity as below -
 ```bash
-Git config --global user.name "John Doe"
-Git config --global user.email johndoe@example.com 
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com 
 ```
 
-Where user name and email is your Github user name and email.
+`Where user name and email is your github user name and email.`
 
 #### Update project dependencies
+We supply the environment variable through .env file. Sample setting are provided in [.env-example](.env-example).
+Copy as below - 
+```bash
+cp .env-example .env
+```
+`supply environment variables as required before proceeding any further.`
 
 ```bash
 composer update && npm i
@@ -56,10 +65,10 @@ php artisan migrate --seed
 php artisan key:generate
 php artisan serve
 ```
-visit localhost:8000 
+visit http://localhost:8000
 
 ### resources
-Learn more about [npm](https://docs.npmjs.com/cli/npm), [Git](https://Git-scm.com/docs), [composer](https://getcomposer.org/doc/03-cli.md) and [php artisan](https://laravel.com/docs/5.5/artisan) commands.
+Learn more about [npm](https://docs.npmjs.com/cli/npm), [git](https://git-scm.com/docs), [composer](https://getcomposer.org/doc/03-cli.md) and [php artisan](https://laravel.com/docs/5.5/artisan) commands.
 
 ### License
 TBA
