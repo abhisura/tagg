@@ -40,10 +40,10 @@ git config --global user.email johndoe@example.com
 `Where user name and email is your github user name and email.`
 
 #### Update project dependencies
-We supply the environment variable through .env file. Sample setting are provided in [.env-example](.env-example).
+We supply the environment variable through .env file. Sample setting are provided in [.env.example](.env.example).
 Copy as below - 
 ```bash
-cp .env-example .env
+cp .env.example .env
 ```
 `supply environment variables as required before proceeding any further.`
 
