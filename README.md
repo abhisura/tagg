@@ -96,4 +96,4 @@ Copyright (c) [University of Nebraska at Omaha](https://www.unomaha.edu/) & [TAG
 
 ### Contribute
 
-You can help this project in many ways, such as suggestions, reporting issues and contribute in coding.
+Everyone ! You can help this project in many ways, such as suggestions, reporting issues and contribute in coding.
