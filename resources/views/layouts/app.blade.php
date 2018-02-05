@@ -429,6 +429,9 @@
                                             <li>
                                                 <a href="{{ url('/rules?rule=1')}}">Donation Preferences</a>
                                             </li>
+                                            <li>
+                                                <a href="{{ url('/donationrequests/create') }}?orgId={{Auth::user()->organization_id}}">Manual Donation Request</a>
+                                            </li>
                                         @endif
                                         <li>
                                             <a href="{{route('organizations.edit',encrypt(Auth::user()->organization_id) )}}">Business

@@ -103,10 +103,6 @@
                                 <div>No Donation Requests are in the system yet.</div>
                             @endif
                         </table>
-
-                        <input type="button" class="btn btn-info" style="background-color: #0099CC "
-                               value="Manual Donation Request"
-                               onClick="window.open('{{ url('/donationrequests/create') }}?orgId={{Auth::user()->organization_id}}', '_bank') ;"/>
                 </div>
             </div>
         </div>
