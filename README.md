@@ -39,6 +39,15 @@ git pull
 ```
 `All changes are supplied to development branch from other feature branches and later merged to master.`
 
+pull/push code for sprint 1 as below - 
+
+```bash
+git clone --recursive https://github.com/SachinPawaskarUNO/tagg.git
+cd tagg
+git checkout -b sprint1 origin/sprint1
+git pull
+```
+
 #### Update project dependencies
 We supply the environment variable through .env file. Sample setting are provided in [.env.example](.env.example).
 Copy as below - 
