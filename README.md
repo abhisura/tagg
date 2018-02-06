@@ -48,6 +48,8 @@ git checkout -b sprint1 origin/sprint1
 git pull
 ```
 
+## `for debugging the app use` [Laravel Debugbar](https://github.com/barryvdh/laravel-debugbar)
+
 #### Update project dependencies
 We supply the environment variable through .env file. Sample setting are provided in [.env.example](.env.example).
 Copy as below - 
