@@ -22,6 +22,7 @@
                                 embedCode.select();
                                 document.execCommand("copy");
                             }
+
                         </script>
                         <div>
                             <input type="button" class="btn btn-info"
@@ -47,3 +48,15 @@
         </div>
     </div>
 </div>
+
+<center>
+<input type="button" class="btn btn-info"
+       style="cursor: help;background-color: #0099CC;border-radius: 10px;height: 40px" value="Set my Donation Preferences"
+       title="Navigate to Donation Preferences Page" onclick="submit();"/>
+
+    <a href="{{ url('/dashboard')}}"
+       class="btn btn-info" title="Navigate to Dashboard" value="Cancel"
+        style="cursor: help;background-color: #0099CC;border-radius: 10px;height: 40px; width: 100px" > Cancel
+    </a>
+
+</center>
