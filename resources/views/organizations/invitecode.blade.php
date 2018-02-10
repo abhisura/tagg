@@ -11,14 +11,14 @@
                         <script type="text/javascript">
                             function Copy() {
                                 var urlCopied = document.getElementById('urlCopied');
-                                urlCopied.value = "{{url('donationrequests/create')}}?orgId={{$organization->id}}&newrequest=true" ;
+                                urlCopied.value = "{{url('donationrequests/create')}}?orgId={{encrypt($organization->id)}}&newrequest=true" ;
                                 urlCopied.select();
                                 //Copied = Url.createTextRange();
                                 document.execCommand("copy");
                             }
                             function GenerateDRForm() {
                                 var embedCode = document.getElementById('embeddedCode');
-                                embedCode.value = '<iframe src="{{url('donationrequests/create')}}?orgId={{$organization->id}}&newrequest=true"\n style="border:none;" id="donationRequest1" name="ifr" frameBorder="0" height="800" width="800" > \n</iframe>';
+                                embedCode.value = '<iframe src="{{url('donationrequests/create')}}?orgId={{encrypt($organization->id)}}&newrequest=true"\n style="border:none;" id="donationRequest1" name="ifr" frameBorder="0" height="800" width="800" > \n</iframe>';
                                 embedCode.select();
                                 document.execCommand("copy");
                             }
@@ -26,7 +26,7 @@
                         </script>
                         <div>
                             <input type="button" class="btn btn-info"
-                                    style="cursor: help;background-color: #0099CC;" value="Show URL"
+                                    style="cursor: help;background-color: #0099CC;" value="Create URL"
                                     title="For use for promotions or on social media." onclick="Copy();"/>
                             <input type="text" placeholder="Click the button to display the URL and copy it to your clipboard" id="urlCopied" size="80"/><br />
                             <small>
@@ -36,7 +36,7 @@
                                 automatically be filtered by your donation preferences.
                             </small><br />
                             <input type="button" class="btn btn-info"
-                                    style="cursor: help;background-color: #0099CC;" value="Show Embedded Form Code"
+                                    style="cursor: help;background-color: #0099CC;" value="Create Embedded Form Code"
                                     title="Insert this HTML code in your business website to allow outside organizations to fill out a donation request form.."
                                     onclick="GenerateDRForm();" /><br />
                             <textarea type="textarea"
