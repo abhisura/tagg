@@ -50,13 +50,7 @@
 </div>
 
 <center>
-<input type="button" class="btn btn-info"
-       style="cursor: help;background-color: #0099CC;border-radius: 10px;height: 40px" value="Set my Donation Preferences"
-       title="Navigate to Donation Preferences Page" onclick="submit();"/>
-
-    <a href="{{ url('/dashboard')}}"
-       class="btn btn-info" title="Navigate to Dashboard" value="Cancel"
-        style="cursor: help;background-color: #0099CC;border-radius: 10px;height: 40px; width: 100px" > Cancel
-    </a>
+        <a href="{{ url('/rules?rule=1')}}" title="Set Donation Preferences" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Set preferences</a>
+        <a href="{{ url('/dashboard')}}" title="Navigate to Dashboard" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cancel</a>
 
 </center>
