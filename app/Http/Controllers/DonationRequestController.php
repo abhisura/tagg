@@ -243,13 +243,19 @@ class DonationRequestController extends Controller
                 $approved_amount = $request->approved_amount;
                 $donation->update(['approved_dollar_amount' => $approved_amount]);
             }
-            $email_template = EmailTemplate::where('template_type_id', Constant::REQUEST_APPROVED)->where('organization_id', $organizationId)->get();
+            // $email_template = EmailTemplate::where('template_type_id', Constant::REQUEST_APPROVED)->where('organization_id', $organizationId)->get();
+            $email_template = EmailTemplate::where([
+                ['template_type_id', Constant::REQUEST_APPROVED],
+            ])->get();
             $email_template = $email_template[0]; //convert collection into an array
 
             return view('emaileditor.approvesendmail', compact('email_template', 'emails', 'firstNames', 'lastNames', 'ids_string', 'page_from', 'backPageFlag'));
 
         } elseif ($request->input('reject') == 'Reject') {
-            $email_template = EmailTemplate::where('template_type_id', Constant::REQUEST_REJECTED)->where('organization_id', $organizationId)->get();
+            // $email_template = EmailTemplate::where('template_type_id', Constant::REQUEST_REJECTED)->where('organization_id', $organizationId)->get();
+            $email_template = EmailTemplate::where([
+                ['template_type_id', Constant::REQUEST_REJECTED],
+            ])->get();
             $email_template = $email_template[0]; //convert collection into an array
 
             return view('emaileditor.rejectsendmail', compact('email_template', 'emails', 'firstNames', 'lastNames', 'ids_string', 'page_from', '$backPageFlag'));
