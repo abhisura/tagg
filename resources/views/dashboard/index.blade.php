@@ -120,7 +120,7 @@
                                             <tr>
                                                 <td style="vertical-align: middle"><input type="checkbox" class="myCheckbox" ids="{{$donationrequest->id}}"/></td>
                                                 <td style="vertical-align: middle">{{ $donationrequest->requester }}</td>
-                                                <td style="vertical-align: middle">${{ $donationrequest->dollar_amount }}</td>
+                                                <td style="vertical-align: middle">${{ number_format($donationrequest->dollar_amount, 2) }}</td>
                                                 <td style="vertical-align: middle">{{ $donationrequest->donationRequestType->item_name }}</td>
                                                 <td style="vertical-align: middle">{{$donationrequest->organization->org_name }}</td>
                                                 <td style="vertical-align: middle"><?php echo date("m/d/Y", strtotime($donationrequest->needed_by_date)); ?></td>
