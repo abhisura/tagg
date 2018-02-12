@@ -24,15 +24,15 @@
                                         </div>
                                     </td>
                                     <td><div style="font-weight: bold"> REQUESTS APPROVED : </div></td>
-                                    <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($approvedNumber, 2) }}</div></td>
+                                    <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($approvedNumber) }}</div></td>
                                 </tr>
                                 <tr>
                                     <td><div style="font-weight: bold;"> REQUESTS REJECTED : </div></td>
-                                    <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($rejectedNumber, 2) }}</div></td>
+                                    <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($rejectedNumber) }}</div></td>
 
                                 </tr>
                                 <td><div style="font-weight: bold;"> REQUESTS PENDING : </div></td>
-                                <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($pendingNumber, 2) }}</div></td>
+                                <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($pendingNumber) }}</div></td>
                             </table>
                         </div>
                     </div>
@@ -55,11 +55,11 @@
                                 </tr>
                                 <tr>
                                     <td><div style="font-weight: bold;"> ACTIVE CUSTOMERS :</div></td>
-                                    <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($userCount, 2) }}</div></td>
+                                    <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($userCount) }}</div></td>
 
                                 </tr>
                                     <td><div style="font-weight: bold;"> ACTIVE LOCATIONS :</div></td>
-                                    <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($numActiveLocations, 2) }}</div></td>
+                                    <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($numActiveLocations) }}</div></td>
 
 
                                 </table>
@@ -79,14 +79,14 @@
                                             </div>
                                         </td>
                                         <td><div style="font-weight: bold"> NEW BUSINESSES THIS WEEK : </div></td>
-                                        <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($userThisWeek, 2) }}</div></td>
+                                        <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($userThisWeek) }}</div></td>
                                     </tr>
                                     <tr>
                                         <td><div style="font-weight: bold;"> NEW BUSINESSES THIS MONTH : </div></td>
-                                        <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($userThisMonth, 2) }}</div></td>
+                                        <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format($userThisMonth) }}</div></td>
                                     </tr>
                                     <td><div style="font-weight: bold;"> NEW BUSINESSES THIS YEAR : </div></td>
-                                    <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format ($userThisYear, 2) }}</div></td>
+                                    <td><div class="huge" style="font-weight: bolder; font-size: 20px">{{ number_format ($userThisYear) }}</div></td>
                                 </table>
                             </div>
                         </div>
