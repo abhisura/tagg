@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="col-xs-9 text-left">
                                     <div class="huge"
-                                         style="color: white;font-size: 35px;font-weight: bolder;">{{number_format($approvedNumber, 2)}}</div>
+                                         style="color: white;font-size: 35px;font-weight: bolder;">{{number_format($approvedNumber)}}</div>
                                     <div style="color: white;font-size: 15px;font-weight: bolder;">REQUESTS APPROVED</div>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="col-xs-9 text-left">
                                     <div class="huge"
-                                         style="color: white;font-size: 35px;font-weight: bolder;">{{number_format($pendingNumber,2)}}</div>
+                                         style="color: white;font-size: 35px;font-weight: bolder;">{{number_format($pendingNumber)}}</div>
                                     <div style="color: white;font-size: 15px;font-weight: bolder;">REQUESTS PENDING</div>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="col-xs-9 text-left">
                                     <div class="huge"
-                                         style="color: white;font-size: 35px;font-weight: bolder;">{{number_format($rejectedNumber, 2)}}</div>
+                                         style="color: white;font-size: 35px;font-weight: bolder;">{{number_format($rejectedNumber)}}</div>
                                     <div style="color: white;font-size: 15px;font-weight: bolder;">REQUESTS REJECTED</div>
                                 </div>
                             </div>
