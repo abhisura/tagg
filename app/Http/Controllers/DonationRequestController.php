@@ -58,7 +58,8 @@ class DonationRequestController extends Controller
 
     public function create(Request $request)
     {
-        $organization = Organization::active()->where('id', $request->orgId)->get();
+        $id = decrypt($request->orgId);
+        $organization = Organization::active()->where('id', $id)->get();
         if (!($organization->isEmpty())) {
             $expireDate = $organization[0]->trial_ends_at;
 
