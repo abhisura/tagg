@@ -146,3 +146,4 @@ Route::get('compose-email', 'EmailTemplateController@send')->middleware('auth');
 Route::get('/organizationdonations/{id}', 'DonationRequestController@showAllDonationRequests')->name('show-donation')->middleware('auth');
 
 
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
