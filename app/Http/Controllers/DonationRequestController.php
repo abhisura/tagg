@@ -114,8 +114,9 @@ class DonationRequestController extends Controller
 
     public function store(Request $request)
     {
+        $id = decrypt($request->orgId);
         $donationRequest = new DonationRequest;
-        $donationRequest->organization_id = $request->orgId;
+        $donationRequest->organization_id = $id;
         $donationRequest->requester = $request->requester;
         $donationRequest->requester_type = $request->requester_type;
         $donationRequest->first_name = $request->firstname;
