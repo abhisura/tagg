@@ -108,24 +108,29 @@ class CqAppSeeder extends Seeder {
 
 		// Role - Root
 		$ru = Role::create(array(
-		    'name' => 'Root'
+			'id' => '1',
+			'name' => 'Root'
 		));
 
 		// Role - CQ Admin
 		$cqa = Role::create(array(
-		    'name' => 'CQ Admin'
+			'id' => '2',
+			'name' => 'CQ Admin'
 		));
 
 		// Role - CQ User
 		$cqu = Role::create(array(
-		    'name' => 'CQ User'
+			'id' => '3', 
+			'name' => 'CQ User'
 		));
 		// Role - Business Admin
 		$bau = Role::create(array(
-		    'name' => 'Business Admin'
+			'id' => '4',
+			'name' => 'Business Admin'
 		));
 		// Role - Business User
 		$buu = Role::create(array(
+			'id' => '5',
 		    'name' => 'Business User'
 		));
 		
@@ -133,14 +138,14 @@ class CqAppSeeder extends Seeder {
 
 		// Org types Organization_typesTableSeeder 
 
-		$orest = Organization_type::create(['type_name' => 'Restaurant', 'type_description' => 'Restaurant']);
-        $ortl = Organization_type::create(['type_name' => 'Retail', 'type_description' => 'Retail']);
-        $ohlth = Organization_type::create(['type_name' => 'Health/Beauty', 'type_description' => 'Health/Beauty']);;
-        $oentr = Organization_type::create(['type_name' => 'Entertainment', 'type_description' => 'Entertainment']);
-        $ohspt = Organization_type::create(['type_name' => 'Hospitality/Travel', 'type_description' => 'Hospitality/Travel']);
-        $ob2bs = Organization_type::create(['type_name' => 'B2B Service', 'type_description' => 'B2B Service']);
-        $ob2cs = Organization_type::create(['type_name' => 'B2C Service', 'type_description' => 'B2C Service']);
-        $oothr = Organization_type::create(['type_name' => 'Others', 'type_description' => 'Anything other than the above options']);
+		$orest = Organization_type::create(['id' => '1','type_name' => 'Restaurant', 'type_description' => 'Restaurant']);
+        $ortl = Organization_type::create(['id' => '2', 'type_name' => 'Retail', 'type_description' => 'Retail']);
+        $ohlth = Organization_type::create(['id' => '3', 'type_name' => 'Health/Beauty', 'type_description' => 'Health/Beauty']);;
+        $oentr = Organization_type::create(['id' => '4','type_name' => 'Entertainment', 'type_description' => 'Entertainment']);
+        $ohspt = Organization_type::create(['id' => '5','type_name' => 'Hospitality/Travel', 'type_description' => 'Hospitality/Travel']);
+        $ob2bs = Organization_type::create(['id' => '6','type_name' => 'B2B Service', 'type_description' => 'B2B Service']);
+        $ob2cs = Organization_type::create(['id' => '7','type_name' => 'B2C Service', 'type_description' => 'B2C Service']);
+        $oothr = Organization_type::create(['id' => '8','type_name' => 'Others', 'type_description' => 'Anything other than the above options']);
 
 				$this->command->info('Org type done ! ');
 
@@ -212,8 +217,8 @@ class CqAppSeeder extends Seeder {
 			$this->command->info('Root user done ! ');
 
 		// create rule 
-		$acpt = Rule_type::create(array( 'type_name' => 'Auto-Reject', 'type_description' => 'Donation Requests that match the criteria of this rule will be automatically rejected by the system.', 'active' => true));
-		$preacpt = Rule_type::create(array( 'type_name' => 'Pre-Accept', 'type_description' => 'Donation Requests that match the criteria of this rule will be flagged as ready for acceptance by the user.', 'active' => true));
+		$acpt = Rule_type::create(array( 'id' => '1' ,'type_name' => 'Auto-Reject', 'type_description' => 'Donation Requests that match the criteria of this rule will be automatically rejected by the system.', 'active' => true));
+		$preacpt = Rule_type::create(array( 'id' => '2' ,'type_name' => 'Pre-Accept', 'type_description' => 'Donation Requests that match the criteria of this rule will be flagged as ready for acceptance by the user.', 'active' => true));
 		
 		// Rule
 		 Rule::create(array('rule_type_id' => $preacpt->id, 'rule_owner_id' => $oroot->id, 'active' => true,
@@ -361,26 +366,31 @@ class CqAppSeeder extends Seeder {
 		// Approval_statusesTableSeeder 
 		
 		$subrw = Approval_status::create(array(
+			'id' => '1' ,
 			'status_name' => 'Submitted',
 			'status_description' => 'Request submitted to business for review.'
 		));
 		
 		$subrj = Approval_status::create(array(
+			'id' => '2' ,
 			'status_name' => 'Pending Rejection', 
 			'status_description' => 'Request flagged as ready for business to reject.'
 		));
 
 		$suba = Approval_status::create(array(
-			 'status_name' => 'Pending Approval', 
+			'id' => '3' , 
+			'status_name' => 'Pending Approval', 
 			 'status_description' => 'Request flagged as ready for business to approve.'
 		));
 
 		$subrrb = Approval_status::create(array(
+			'id' => '4' ,
 			'status_name' => 'Rejected',
 			'status_description' => 'Request rejected by business.'
 		));
 
 		$subrab = Approval_status::create(array(
+			'id' => '5' ,
 			'status_name' => 'Approved', 
 			'status_description' => 'Request accepted by business.'
 		));
@@ -402,19 +412,24 @@ class CqAppSeeder extends Seeder {
 		// we'll create diff email EmailTemplateTypes
 
 		$eadmin = EmailTemplateTypes::create(array(
-		    'template_type' => 'B Admin'
+			'id' => '1',
+			'template_type' => 'Business Admin'
 		));
 		$euser = EmailTemplateTypes::create(array(
-		    'template_type' => 'B user'
+			'id' => '2',
+			'template_type' => 'Business user'
 		));
 		$eaprv = EmailTemplateTypes::create(array(
-		    'template_type' => 'Donation approved'
+			'id' => '3',
+			'template_type' => 'Donation approved'
 		));
 		$erjct = EmailTemplateTypes::create(array(
-		    'template_type' => 'Donation Rejected'
+			'id' => '4',
+			'template_type' => 'Donation Rejected'
 		));
 		$efpwd = EmailTemplateTypes::create(array(
-		    'template_type' => 'F passwd'
+			'id' => '5',
+			'template_type' => 'Forgot password'
 		));
 
 		// Email templates 
