@@ -249,7 +249,7 @@ class CqAppSeeder extends Seeder {
                         "valid": true
                         }'
         ));
-		Rule::create(array('id' => '1', 'rule_type_id' => $acpt->id, 'rule_owner_id' => $oroot->id, 'active' => true,
+		Rule::create(array('id' => '2', 'rule_type_id' => $acpt->id, 'rule_owner_id' => $oroot->id, 'active' => true,
             'rule' => '{
             "condition": "AND",
             "rules": [
