@@ -336,11 +336,11 @@ class CqAppSeeder extends Seeder {
 		Request_item_purpose::create(array('id' => '9','purpose_name' => 'Other (please explain)', 'purpose_description' => 'Other Purposes'));
 
 		// Request_item_type
-		Request_item_type::create(array('id' => '1','item_name' => 'Cash/Check', 'item_description' => 'Monetary Donation'));
-		Request_item_type::create(array('id' => '2','item_name' => 'Gift Card', 'item_description' => 'Store Credit'));
-		Request_item_type::create(array('id' => '3','item_name' => 'Product/Service Donation', 'item_description' => 'Donation of Items or Services'));
-		Request_item_type::create(array('id' => '4','item_name' => 'Sponsorship/Awareness', 'item_description' => 'Request for visibility'));
-		Request_item_type::create(array('id' => '5','item_name' => 'Other (please explain)', 'item_description' => 'Other Types of Requests'));
+		// Request_item_type::create(array('id' => '1','item_name' => 'Cash/Check', 'item_description' => 'Monetary Donation'));
+		// Request_item_type::create(array('id' => '2','item_name' => 'Gift Card', 'item_description' => 'Store Credit'));
+		// Request_item_type::create(array('id' => '3','item_name' => 'Product/Service Donation', 'item_description' => 'Donation of Items or Services'));
+		// Request_item_type::create(array('id' => '4','item_name' => 'Sponsorship/Awareness', 'item_description' => 'Request for visibility'));
+		// Request_item_type::create(array('id' => '5','item_name' => 'Other (please explain)', 'item_description' => 'Other Types of Requests'));
 
 		// Requester_type
 		Requester_type::create(array('type_name' => 'Animal Welfare', 'type_description' => 'This is an Animal Welfare'));
