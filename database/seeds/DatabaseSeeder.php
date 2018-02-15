@@ -434,6 +434,7 @@ class CqAppSeeder extends Seeder {
 
 		// Email templates 
 		EmailTemplate::create(array(
+			'id' => '1',
 			'template_type_id' => $eadmin->id, 
 			'organization_id' => $oroot->id, 
 			'email_subject' => 'Welcome to CharityQ!', 
@@ -443,6 +444,7 @@ class CqAppSeeder extends Seeder {
 		));
 		
 		EmailTemplate::create(array(
+			'id' => '2',
 			'template_type_id' => $euser->id, 
 			'organization_id' => $oroot->id, 
 			'email_subject' => 'Welcome to CharityQ!', 
@@ -453,6 +455,7 @@ class CqAppSeeder extends Seeder {
 		));
 		
 		EmailTemplate::create(array(
+			'id' => '3',
 			'template_type_id' => $eaprv->id, 
 			'organization_id' => $oroot->id, 
 			'email_subject' => 'Decision about your donation request', 
@@ -466,13 +469,17 @@ class CqAppSeeder extends Seeder {
 			));
 		
 		EmailTemplate::create(array(
+			'id' => '4',
 			'template_type_id' => $erjct->id, 
 			'organization_id' => $oroot->id, 
 			'email_subject' => 'Your donation request has been declined', 
 			'email_message' => '<p style="background: white;"><span style="font-size: 10.5pt; font-family: Verdana; color: black;">Dear &nbsp;<strong><span>{Addressee},&nbsp;</span></strong></span></p>
 		<p style="background: white;"><span style="font-size: 10.5pt; font-family: Verdana; color: black;">Thank you for entering a request for donation on our website. Unfortunately, at this time we are not able to help out with your event.&nbsp;All of our Omaha locations have partnered with TAGG (Together a Greater Good) so that we can support as many local organizations as possible. In lieu of donating to specific raffles, auctions and galas, and sponsorships, we donate 5% of a guest&rsquo;s tab to an organization of their choosing. &nbsp;&nbsp;</span></p>
 		<p style="font-family: Calibri, sans-serif;"><span style="font-size: 10.5pt; font-family: Verdana; color: black;">This is done through the TAGG mobile app, which is available for download on iPhones and Androids. Just search &ldquo;Together a Greater Good&rdquo; and you should find it!</span></p>'));
-		EmailTemplate::create(array('template_type_id' => $efpwd->id, 'organization_id' => $oroot->id, 'email_subject' => 'Password Change Request', 'email_message' => '<p>Dear &nbsp;<strong>{Addressee},&nbsp;</strong>&nbsp;</p>
+		
+		EmailTemplate::create(array(
+		'id' => '5',
+		'template_type_id' => $efpwd->id, 'organization_id' => $oroot->id, 'email_subject' => 'Password Change Request', 'email_message' => '<p>Dear &nbsp;<strong>{Addressee},&nbsp;</strong>&nbsp;</p>
 		<p>You have changed your password for CharityQ application. If it is not you that changed password please contact your admin as soon as possible.</p>
 		<p>Sincerely,</p>
 		<p>- CharityQ Team</p>'
